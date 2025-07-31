@@ -1,19 +1,10 @@
-import { useEffect, useState } from 'react'
-import './App.css'
+import React from 'react'
+import LandingPage from './Pages/LandingPage'
 
 function App() {
-  const [msg, setMsg] = useState('Loading...')
-
-  useEffect(() => {
-    fetch('/api/test')
-      .then((res) => res.json())
-      .then((data) => setMsg(data.message))
-      .catch((err) => setMsg('Error connecting to backend'))
-  }, [])
-
   return (
     <div className="App">
-      <h1>{msg}</h1>
+      <LandingPage />
     </div>
   )
 }
